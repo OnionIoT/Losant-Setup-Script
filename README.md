@@ -1,4 +1,4 @@
-Auto setup script for the Omega2 on Losant cloud
+## Auto setup script for the Omega2 on Losant Cloud Platform
 
 Usage:
 ```bash

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "Installing MQTT tools..."
-opkg update
-opkg install mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl
+opkg update > /dev/null
+opkg install mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl > /dev/null
 
 echo "Setup Losant Access..."
 read -p "Losant Device ID: " deviceId
@@ -11,7 +11,7 @@ read -p "Losant Access Secret: " accessSecret
 
 echo "Downloading Losant Root Certificate..."
 mkdir -p /etc/losant/
-wget https://raw.githubusercontent.com/Losant/losant-mqtt-ruby/master/lib/losant_mqtt/RootCA.crt -P /etc/losant/
+wget -q https://raw.githubusercontent.com/Losant/losant-mqtt-ruby/master/lib/losant_mqtt/RootCA.crt -P /etc/losant/
 
 echo "# For debugging
 log_type all
