@@ -38,4 +38,4 @@ echo ""
 echo "Subscribe to commands with:
     mosquitto_sub -t losant/$deviceId/command"
 echo "Update state with:
-    mosquitto_pub -t losant/$deviceId/state -m {\"data\": {\"varName\": \"OK\"}}"
+    mosquitto_pub -t losant/$deviceId/state -m '{\"data\": {\"varName\": \"OK\"}}'"
